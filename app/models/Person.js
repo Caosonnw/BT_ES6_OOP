@@ -3,4 +3,5 @@ export default class Person {
   Name = '';
   Email = '';
   Location = '';
+  Person = '';
 }

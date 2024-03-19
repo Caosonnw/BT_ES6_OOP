@@ -7,6 +7,7 @@ export default class Customer extends Person {
 
   constructor(maID, name, email, location, ten_cong_ty, tri_gia_hoa_don, danh_gia) {
     super(maID, name, email, location);
+    this.Person = 'customer';
     this.TenCongTy = ten_cong_ty;
     this.TriGiaHoaDon = tri_gia_hoa_don;
     this.DanhGia = danh_gia;

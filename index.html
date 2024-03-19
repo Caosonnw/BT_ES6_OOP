@@ -49,7 +49,7 @@
     <section class="content mt-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-2 mb-3 ms-5 me-3">
+          <div class="col-md-3 mb-3 ms-5 me-3">
             <button
               type="button"
               class="btn btn-info fw-bold"
@@ -60,30 +60,23 @@
             </button>
           </div>
 
-          <div class="col-md-3 mb-3 me-2">
+          <div class="col-md-4 mb-3 me-5">
             <input
               type="text"
               class="form-control"
               name=""
               id="txt-Search"
               aria-describedby="helpId"
-              placeholder="Tìm kiếm..."
+              placeholder="Tìm kiếm theo tên..."
+              oninput="searchPerson(event)"
             />
           </div>
-          <div class="col-md-2 mb-3 me-4">
-            <select class="form-select" name="" id="">
-              <option selected>All</option>
-              <option value="">Student</option>
-              <option value="">Employee</option>
-              <option value="">Customer</option>
-            </select>
-          </div>
-          <div class="col-md-4 mb-3">
-            <select class="form-select" name="" id="">
-              <option selected>Sắp xếp họ tên theo đối tượng</option>
-              <option value="">Student</option>
-              <option value="">Employee</option>
-              <option value="">Customer</option>
+          <div class="col-md-3 mb-3 me-4 ms-5">
+            <select class="form-select" name="" id="sl_Person">
+              <option value="All">All</option>
+              <option value="Student">Student</option>
+              <option value="Employee">Employee</option>
+              <option value="Customer">Customer</option>
             </select>
           </div>
         </div>
@@ -179,7 +172,7 @@
             </div>
             <div class="mb-3">
               <select class="form-select form-select-lg" name="" id="Person">
-                <option selected>Vui lòng chọn</option>
+                <option value="0">Vui lòng chọn</option>
                 <option value="student">Student</option>
                 <option value="employee">Employee</option>
                 <option value="customer">Customer</option>
@@ -290,6 +283,7 @@
             <button type="button" class="btn btn-dark fw-bold" data-bs-dismiss="modal">
               Đóng
             </button>
+            <button type="button" class="btn btn-secondary fw-bold" id="btn_Update">Cập nhật</button>
             <button type="button" class="btn btn-info fw-bold" id="btn_Add">
               Thêm
             </button>
